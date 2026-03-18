@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: employee-service change 1
+    name: employee-service change 2
 
 custom:
   value: employee-config-loaded
