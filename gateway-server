@@ -1,0 +1,29 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+
+        - id: employee-service
+          uri: lb://employee-service
+          predicates:
+            - Path=/api/v1/employees/**
+
+        - id: skill-service
+          uri: lb://skill-service
+          predicates:
+            - Path=/api/v1/skills/**
+
+        - id: organization-service
+          uri: lb://organization-service
+          predicates:
+            - Path=/api/v1/departments/**
+
+        - id: approval-service
+          uri: lb://approval-service
+          predicates:
+            - Path=/api/v1/approvals/**
+
+        - id: masterdata-service
+          uri: lb://masterdata-service
+          predicates:
+            - Path=/api/v1/master-data/**
