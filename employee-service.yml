@@ -5,7 +5,16 @@ spring:
   application:
     name: employee-service
 
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
 custom:
   value: employee-config-loaded
-
-    
