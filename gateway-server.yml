@@ -12,22 +12,7 @@ spring:
       discovery:
         locator:
           enabled: false
-
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://eureka-server:8761/eureka/
-
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-
-  cloud:
-    gateway:
+  
       routes:
 
         - id: employee-service
@@ -54,3 +39,17 @@ management:
           uri: lb://masterdata-service
           predicates:
             - Path=/api/master-data/**
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
