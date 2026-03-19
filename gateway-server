@@ -6,24 +6,24 @@ spring:
         - id: employee-service
           uri: lb://employee-service
           predicates:
-            - Path=/api/v1/employees/**
+            - Path=/api/employees/**
 
         - id: skill-service
           uri: lb://skill-service
           predicates:
-            - Path=/api/v1/skills/**
+            - Path=/api/skills/**
 
         - id: organization-service
           uri: lb://organization-service
           predicates:
-            - Path=/api/v1/departments/**
+            - Path=/api/departments/**
 
         - id: approval-service
           uri: lb://approval-service
           predicates:
-            - Path=/api/v1/approvals/**
+            - Path=/api/approvals/**
 
         - id: masterdata-service
           uri: lb://masterdata-service
           predicates:
-            - Path=/api/v1/master-data/**
+            - Path=/api/master-data/**
