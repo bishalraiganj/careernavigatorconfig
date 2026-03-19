@@ -1,9 +1,9 @@
 server:
-  port: 8081
+  port: 9030
 
 spring:
   application:
-    name: employee-service change 2
+    name: employee-service
 
 custom:
   value: employee-config-loaded
