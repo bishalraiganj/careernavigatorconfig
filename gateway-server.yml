@@ -1,18 +1,8 @@
-server:
-  port: 8080
+
 
 spring:
-  application:
-    name: gateway-server
-
-
-    
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: false
-  
       routes:
 
         - id: employee-service
@@ -40,13 +30,6 @@ spring:
           predicates:
             - Path=/api/master-data/**
 
-
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://eureka-server:8761/eureka/
 
 
 management:
