@@ -1,36 +1,27 @@
-
-
+# CORRECT - new namespace for Spring Cloud 2025.x
 spring:
   cloud:
     gateway:
-      routes:
-
-        - id: employee-service
-          uri: lb://EMPLOYEE-SERVICE
-          predicates:
-            - Path=/api/employees/**
-
-        - id: skill-service
-          uri: lb://SKILL-SERVICE
-          predicates:
-            - Path=/api/skills/**
-
-        - id: organization-service
-          uri: lb://ORGANIZATION-SERVICE
-          predicates:
-            - Path=/api/departments/**
-
-        - id: approval-service
-          uri: lb://APPROVAL-SERVICE
-          predicates:
-            - Path=/api/approvals/**
-
-        - id: masterdata-service
-          uri: lb://MASTERDATA-SERVICE
-          predicates:
-            - Path=/api/master-data/**
-
-
-
-
-
+      server:
+        webflux:
+          routes:
+            - id: employee-service
+              uri: lb://EMPLOYEE-SERVICE
+              predicates:
+                - Path=/api/employees/**
+            - id: skill-service
+              uri: lb://SKILL-SERVICE
+              predicates:
+                - Path=/api/skills/**
+            - id: organization-service
+              uri: lb://ORGANIZATION-SERVICE
+              predicates:
+                - Path=/api/departments/**
+            - id: approval-service
+              uri: lb://APPROVAL-SERVICE
+              predicates:
+                - Path=/api/approvals/**
+            - id: masterdata-service
+              uri: lb://MASTERDATA-SERVICE
+              predicates:
+                - Path=/api/master-data/**
