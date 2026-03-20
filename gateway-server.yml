@@ -6,27 +6,27 @@ spring:
       routes:
 
         - id: employee-service
-          uri: lb://employee-service
+          uri: lb://EMPLOYEE-SERVICE
           predicates:
             - Path=/api/employees/**
 
         - id: skill-service
-          uri: lb://skill-service
+          uri: lb://SKILL-SERVICE
           predicates:
             - Path=/api/skills/**
 
         - id: organization-service
-          uri: lb://organization-service
+          uri: lb://ORGANIZATION-SERVICE
           predicates:
             - Path=/api/departments/**
 
         - id: approval-service
-          uri: lb://approval-service
+          uri: lb://APPROVAL-SERVICE
           predicates:
             - Path=/api/approvals/**
 
         - id: masterdata-service
-          uri: lb://masterdata-service
+          uri: lb://MASTERDATA-SERVICE
           predicates:
             - Path=/api/master-data/**
 
