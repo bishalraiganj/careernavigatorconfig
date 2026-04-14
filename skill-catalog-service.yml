@@ -1,9 +1,5 @@
 app:
   message: C1 (DEFAULT) Skill-catalog-service config
 
-management:
-  endpoint:
-    env:
-      show-values: always
 
   
