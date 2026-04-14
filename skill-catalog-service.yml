@@ -1,2 +1,9 @@
 app:
   message: (DEFAULT) Skill-catalog-service config
+
+management:
+  endpoint:
+    env:
+      show-values: always
+
+  
